@@ -1,0 +1,13 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=TORCS
+Comment=3D racing cars simulator game
+Comment[es]=Juego de simulación 3D de carrera de autos
+Comment[de]=Autorennspiel in 3D
+Icon=torcs
+Exec=torcs
+Terminal=false
+StartupNotify=false
+Categories=Game;Simulation;
+Keywords=cars;tracks;road;race;racing;simulator;

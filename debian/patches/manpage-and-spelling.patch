@@ -1,0 +1,160 @@
+From: Markus Koschany <apo@debian.org>
+Date: Thu, 4 May 2017 23:30:15 +0200
+Subject: manpage and spelling
+
+---
+ doc/man/accc.6                        | 4 ++--
+ doc/man/nfs2ac.6                      | 4 ++--
+ doc/man/nfsperf.6                     | 2 +-
+ doc/man/texmapper.6                   | 4 ++--
+ doc/man/trackgen.6                    | 4 ++--
+ src/tools/accc/ac3dgroup.cpp          | 8 ++++----
+ src/tools/texmapper/maintexmapper.cpp | 2 +-
+ 7 files changed, 14 insertions(+), 14 deletions(-)
+
+diff --git a/doc/man/accc.6 b/doc/man/accc.6
+index 19007a8..fece0c7 100644
+--- a/doc/man/accc.6
++++ b/doc/man/accc.6
+@@ -40,7 +40,7 @@ ac3d to ac3d with triangles (used for cars) and extended ac3d file output (norma
+ ac3d to ac3d with triangles no split and extended ac3d file output (normals normals)
+ .TP
+ .B +shad
+-ac3d to ac3d with triangles, create a new ac3d file used for track shading\n   vertical mapping of a single texture
++ac3d to ac3d with triangles, create a new ac3d file used for track shading, vertical mapping of a single texture
+ .TP
+ .B <inputfile>
+ .TP
+@@ -85,5 +85,5 @@ no texture split (for debug)
+ .BR torcs (6)
+ .SH "AUTHOR"
+ .LP
+-This manual page was writen by Rudy Godoy <rudy@kernel-panik.org>,
++This manual page was written by Rudy Godoy <rudy@kernel-panik.org>,
+ for the Debian GNU/Linux system (but may be used by others).
+diff --git a/doc/man/nfs2ac.6 b/doc/man/nfs2ac.6
+index 5fb1ba4..78641aa 100644
+--- a/doc/man/nfs2ac.6
++++ b/doc/man/nfs2ac.6
+@@ -1,7 +1,7 @@
+ .TH "TORCS" "6" "1.1" "Rudy Godoy" "Games"
+ .SH "NAME"
+ .LP
+-nfs2ac
++nfs2ac \- Car model converter from 'Need for Speed' to Ac3d
+ .SH "DESCRIPTION"
+ .TP
+ This manual describes the nfs2ac application that is shipped with the game TORCS.
+@@ -13,6 +13,6 @@ This program does not use arguments.
+ .BR torcs (6)
+ .SH "AUTHOR"
+ .LP
+-This manual page was writen by Rudy Godoy <rudy@kernel-panik.org>,
++This manual page was written by Rudy Godoy <rudy@kernel-panik.org>,
+ for the Debian GNU/Linux system (but may be used by others).
+ 
+diff --git a/doc/man/nfsperf.6 b/doc/man/nfsperf.6
+index a270ca0..469cc42 100644
+--- a/doc/man/nfsperf.6
++++ b/doc/man/nfsperf.6
+@@ -22,6 +22,6 @@ converted parameters
+ .BR torcs (6)
+ .SH "AUTHOR"
+ .LP
+-This manual page was writen by Rudy Godoy <rudy@kernel-panik.org>,
++This manual page was written by Rudy Godoy <rudy@kernel-panik.org>,
+ for the Debian GNU/Linux system (but may be used by others).
+ 
+diff --git a/doc/man/texmapper.6 b/doc/man/texmapper.6
+index 35802f6..d6a72c9 100644
+--- a/doc/man/texmapper.6
++++ b/doc/man/texmapper.6
+@@ -14,7 +14,7 @@ This manual describes the use of Texture Auto Mapper application that is shipped
+ input model file in AC3D format [car.ac]
+ .TP
+ .B -o \fI<output acfile>\fP
+-ouput model file in AC3D format [car-out.ac]
++output model file in AC3D format [car-out.ac]
+ .TP
+ .B -p \fI<parameters>\fP
+ parameters in XML format [texmapper.xml]
+@@ -28,5 +28,5 @@ print this message
+ .BR torcs (6)
+ .SH "AUTHOR"
+ .LP
+-This manual page was writen by Rudy Godoy <rudy@kernel-panik.org>,
++This manual page was written by Rudy Godoy <rudy@kernel-panik.org>,
+ for the Debian GNU/Linux system (but may be used by others).
+diff --git a/doc/man/trackgen.6 b/doc/man/trackgen.6
+index b9c65db..a221d97 100644
+--- a/doc/man/trackgen.6
++++ b/doc/man/trackgen.6
+@@ -22,7 +22,7 @@ draw bump track
+ .B -B
+ Don't use terrain border (relief supplied int clockwise, ext CC)
+ .TP
+-.B -a 
++.B -a
+ draw all (default is track only)
+ .TP
+ .B -s
+@@ -47,5 +47,5 @@ nb of height steps for 4th elevation file [30]
+ .BR torcs (6)
+ .SH "AUTHOR"
+ .LP
+-This manual page was writen by Rudy Godoy <rudy@kernel-panik.org>,
++This manual page was written by Rudy Godoy <rudy@kernel-panik.org>,
+ for the Debian GNU/Linux system (but may be used by others).
+diff --git a/src/tools/accc/ac3dgroup.cpp b/src/tools/accc/ac3dgroup.cpp
+index d84df39..fb56f58 100644
+--- a/src/tools/accc/ac3dgroup.cpp
++++ b/src/tools/accc/ac3dgroup.cpp
+@@ -467,7 +467,7 @@ void loadAndGroup( char *OutputFileName)
+ 			fprintf(ofile,"OBJECT group\n");
+ 			fprintf(ofile,"name \"___%s_gl3\"\n",array_groups[i].tkmn->name);
+ 			fprintf(ofile,"kids %d\n",array_groups[i].numkids3);
+-			printf("writting group: ___%s_gl3\n",array_groups[i].tkmn->name);
++			printf("writing group: ___%s_gl3\n",array_groups[i].tkmn->name);
+ 			tmpob=array_groups[i].kids3;
+ 			while (tmpob!=NULL) {
+ 
+@@ -481,7 +481,7 @@ void loadAndGroup( char *OutputFileName)
+ 			fprintf(ofile,"OBJECT group\n");
+ 			fprintf(ofile,"name \"%%___%s_gl2\"\n",array_groups[i].tkmn->name);
+ 			fprintf(ofile,"kids %d\n",array_groups[i].numkids2);
+-			printf("writting group: ___%s_gl2\n",array_groups[i].tkmn->name);
++			printf("writing group: ___%s_gl2\n",array_groups[i].tkmn->name);
+ 			tmpob=array_groups[i].kids2;
+ 			while (tmpob!=NULL) {
+ 				printOb(tmpob);
+@@ -493,7 +493,7 @@ void loadAndGroup( char *OutputFileName)
+ 			fprintf(ofile,"OBJECT group\n");
+ 			fprintf(ofile,"name \"___%s_gl1\"\n",array_groups[i].tkmn->name);
+ 			fprintf(ofile,"kids %d\n",array_groups[i].numkids1);
+-			printf("writting group: ___%s_gl1\n",array_groups[i].tkmn->name);
++			printf("writing group: ___%s_gl1\n",array_groups[i].tkmn->name);
+ 			tmpob=array_groups[i].kids1;
+ 			while (tmpob!=NULL) {
+ 				printOb(tmpob);
+@@ -506,7 +506,7 @@ void loadAndGroup( char *OutputFileName)
+ 		fprintf(ofile,"OBJECT group\n");
+ 		fprintf(ofile,"name \"___%s_gl0\"\n",array_groups[i].tkmn->name);
+ 		fprintf(ofile,"kids %d\n",array_groups[i].numkids0+1);
+-		printf("writting group: ___%s_gl0\n",array_groups[i].tkmn->name);
++		printf("writing group: ___%s_gl0\n",array_groups[i].tkmn->name);
+ 		tmpob=array_groups[i].kids0;
+ 		while (tmpob!=NULL) {
+ 			printOb(tmpob);
+diff --git a/src/tools/texmapper/maintexmapper.cpp b/src/tools/texmapper/maintexmapper.cpp
+index fbfff34..9cb2dbc 100644
+--- a/src/tools/texmapper/maintexmapper.cpp
++++ b/src/tools/texmapper/maintexmapper.cpp
+@@ -598,7 +598,7 @@ void usage(void)
+     fprintf(stderr, "Usage: texmapper [options]\n");
+     fprintf(stderr, "The options are:\n");
+     fprintf(stderr, "-f <input acfile>     : input model file in AC3D format [car.ac]\n");
+-    fprintf(stderr, "-o <output acfile>    : ouput model file in AC3D format [car-out.ac]\n");
++    fprintf(stderr, "-o <output acfile>    : output model file in AC3D format [car-out.ac]\n");
+     fprintf(stderr, "-p <parameters>       : parameters in XML format [texmapper.xml]\n");
+     fprintf(stderr, "-s <file>             : output skin file [skin.rgb]\n");
+     fprintf(stderr, "--help                : print this message\n");

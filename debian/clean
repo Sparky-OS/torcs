@@ -1,0 +1,12 @@
+Make-config
+config.h
+src/doc/torcsdoc.conf
+src/linux/torcs
+src/tools/accc/accc
+src/tools/nfs2ac/nfs2ac
+src/tools/nfsperf/nfsperf
+src/tools/texmapper/texmapper
+src/tools/trackgen/trackgen
+stamp-h1
+torcs.rc
+.torcs.rc

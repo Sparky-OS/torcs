@@ -1,0 +1,54 @@
+#!/usr/bin/make -f
+PKD   = $(abspath $(dir $(MAKEFILE_LIST)))
+PKG   = $(word 2,$(shell dpkg-parsechangelog -l$(PKD)/changelog | grep ^Source))
+VER   = $(shell dpkg-parsechangelog -l$(PKD)/changelog -SVersion | cut -d- -f1)
+export DEB_LDFLAGS_MAINT_APPEND = -Wl,--as-needed
+export DEB_BUILD_MAINT_OPTIONS = hardening=+all
+
+%:
+	dh $@ --without autoreconf
+
+override_dh_auto_configure:
+	dh_auto_configure -- \
+		--bindir=\$${prefix}/games \
+		--x-libraries=/usr/lib/
+
+override_dh_install:
+	$(RM) debian/tmp/usr/share/games/torcs/telemetry/telemetry.sh
+	$(RM) debian/tmp/usr/share/games/torcs/tracks/road/ole-road-1/generate.sh
+	$(RM) debian/tmp/usr/share/games/torcs/COPYING
+	dh_install
+	find debian/ -type f -name Makefile -delete
+	find debian/ -type d -empty -delete
+
+override_dh_auto_install:
+	dh_auto_install -- install DESTDIR=$(CURDIR)/debian/tmp
+	dh_auto_install -- datainstall DESTDIR=$(CURDIR)/debian/tmp
+
+override_dh_installchangelogs:
+	# The Changes paragraph inside the README is basically the changelog.
+	dh_installchangelogs README
+
+## http://wiki.debian.org/onlyjob/get-orig-source
+.PHONY: get-orig-source
+get-orig-source: $(PKG)_$(VER).orig.tar.xz $(info I: $(PKG)_$(VER))
+	@
+
+$(PKG)_$(VER).orig.tar.xz:
+	@echo "# Downloading..."
+	uscan --noconf --verbose --rename --destdir=$(CURDIR) --check-dirname-level=0 --force-download --download-current-version $(PKD)
+	$(if $(wildcard $(PKG)-$(VER)),$(error $(PKG)-$(VER) exist, aborting..))
+	@echo "# Extracting..."
+	mkdir $(PKG)-$(VER) \
+	&& tar -xf $(PKG)_*.orig.tar.* --directory $(PKG)-$(VER) --strip-components 1 \
+	|| $(RM) -r $(PKG)-$(VER)
+	@echo "# Cleaning-up..."
+	cd $(PKG)-$(VER) \
+	&& find -depth -type d -name 'windows' -exec $(RM) -r {} \; -printf 'removed %p\n' \
+	&& find -depth -type d -name 'CVS' -exec $(RM) -r {} \; -printf 'removed %p\n' \
+	&& $(RM) -r -v \
+		data/cars/models/pw-* data/cars/models/kc-*
+	@echo "# Packing..."
+	find -L "$(PKG)-$(VER)" -xdev -type f -print | LC_ALL=C sort \
+	| XZ_OPT="-6v" tar -caf "$(PKG)_$(VER).orig.tar.xz" -T- --owner=root --group=root --mode=a+rX \
+	&& $(RM) -r "$(PKG)-$(VER)"
