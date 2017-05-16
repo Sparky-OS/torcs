@@ -4,6 +4,8 @@ Subject: glibc default source
 
 _SVID_SOURCE and _BSD_SOURCE are deprecated, using _DEFAULT_SOURCE
 instead.
+
+Forwarded: https://sourceforge.net/p/torcs/mailman/message/35831161/
 ---
  Make-config.in | 2 +-
  1 file changed, 1 insertion(+), 1 deletion(-)

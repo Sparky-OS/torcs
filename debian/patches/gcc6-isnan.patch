@@ -4,6 +4,8 @@ Subject: gcc6-isnan
 
 car->ctrl->gear is defined as int, therefore it can never be infinite or
 NaN. Just drop the tests.
+
+Forwarded: https://sourceforge.net/p/torcs/mailman/message/35831161/
 ---
  src/drivers/olethros/geometry.cpp | 2 +-
  1 file changed, 1 insertion(+), 1 deletion(-)
