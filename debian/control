@@ -21,7 +21,7 @@ Build-Depends:
  libxt-dev (>= 6.8.2),
  libxxf86vm-dev (>= 6.8.2),
  zlib1g-dev (>= 1.2.1.1)
-Standards-Version: 3.9.8
+Standards-Version: 4.0.0
 Vcs-Git: https://anonscm.debian.org/git/pkg-games/torcs.git
 Vcs-Browser: https://anonscm.debian.org/git/pkg-games/torcs.git
 Homepage: http://torcs.org
