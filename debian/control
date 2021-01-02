@@ -40,6 +40,7 @@ Description: 3D racing cars simulator game using OpenGL
  in C or C++.
 
 Package: torcs-data
+Multi-Arch: foreign
 Architecture: all
 Breaks:
  torcs-data-cars (<< 1.3.7+dfsg-1),
