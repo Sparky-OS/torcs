@@ -4,6 +4,7 @@ torcs (1.3.7+dfsg-5) unstable; urgency=medium
   * Declare compliance with Debian Policy 4.5.1.
   * Use canonical VCS URL.
   * Mark torcs-data Multi-Arch: foreign
+  * Support runstatedir option.
 
  -- Markus Koschany <apo@debian.org>  Sat, 02 Jan 2021 13:58:00 +0100
 
