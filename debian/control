@@ -5,7 +5,7 @@ Maintainer: Debian Games Team <pkg-games-devel@lists.alioth.debian.org>
 Uploaders:
  Markus Koschany <apo@debian.org>
 Build-Depends:
- debhelper (>= 10),
+ debhelper-compat (= 13),
  freeglut3-dev (>= 2.2.0),
  libalut-dev (>= 1.0.0),
  libgl1-mesa-dev,
