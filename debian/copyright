@@ -97,7 +97,6 @@ Files: data/cars/models/acura-nsx-sz/*
        data/cars/models/car1-trb3/*
        data/cars/models/car5-trb1/*
        data/cars/models/car1-stock1/*
-       data/cars/models/acura-nsx-sz/*
        data/cars/models/car4-trb1/*
 Copyright: 2002, Jean-Christophe Durieu
            2000, ViPeR <viper@mttestdriver.com>
