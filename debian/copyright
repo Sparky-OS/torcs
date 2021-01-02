@@ -111,8 +111,8 @@ Copyright: 2005 by Eric Espie
 License: GFDL-1.2
 
 Files: debian/*
-Copyright: 2004, Rudy Godoy Guillén <rudy@stone-head.org>
-           2017, Markus Koschany <apo@debian.org>
+Copyright: 2004,      Rudy Godoy Guillén <rudy@stone-head.org>
+           2017-2021, Markus Koschany <apo@debian.org>
 License: GPL-2+
 
 License: GPL-2+
