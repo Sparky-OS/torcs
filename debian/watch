@@ -1,3 +1,4 @@
-version=4
-opts=dversionmangle=s/\+dfsg\d*$// \
-  http://sf.net/torcs/torcs-(\d\S+)\.(?:zip|tgz|tbz|txz|(?:tar\.(?:gz|bz2|xz)))
+Version: 5
+Source: http://sf.net/torcs/
+Matching-Pattern: torcs[-_]?[Vv]?(\d[\-+\.:\~\d]*)@ARCHIVE_EXT@
+Dversion-Mangle: auto
