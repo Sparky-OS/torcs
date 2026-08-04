@@ -2,6 +2,34 @@ Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: TORCS
 Upstream-Contact: Bernhard Wymann <berniew@bluechin.ch>
 Source: https://torcs.sourceforge.net
+Files-Excluded:
+ installer/windows
+ src/windows
+ data/cars/models/kc-2000gt
+ data/cars/models/kc-5300gt
+ data/cars/models/kc-a110
+ data/cars/models/kc-alfatz2
+ data/cars/models/kc-bigh
+ data/cars/models/kc-cobra
+ data/cars/models/kc-coda
+ data/cars/models/kc-conrero
+ data/cars/models/kc-corvette-ttop
+ data/cars/models/kc-daytona
+ data/cars/models/kc-db4z
+ data/cars/models/kc-dbs
+ data/cars/models/kc-dino
+ data/cars/models/kc-ghibli
+ data/cars/models/kc-giulietta
+ data/cars/models/kc-grifo
+ data/cars/models/kc-gt40
+ data/cars/models/kc-gto
+ data/cars/models/kc-p4
+ data/cars/models/pw-206wrc
+ data/cars/models/pw-306wrc
+ data/cars/models/pw-corollawrc
+ data/cars/models/pw-evoviwrc
+ data/cars/models/pw-focuswrc
+ data/cars/models/pw-imprezawrc
 
 Files: *
 Copyright: 2000, Eric Espié <eric.espie@free.fr>
