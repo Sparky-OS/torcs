@@ -1,6 +1,4 @@
-gcc6-isnan.patch
-glibc-default-source.patch
 format-argument.patch
 manpage-and-spelling.patch
-gcc7.patch
+#gcc7.patch
 support-runstatedir.patch
