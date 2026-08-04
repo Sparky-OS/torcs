@@ -1,6 +1,5 @@
 Source: torcs
 Section: games
-Priority: optional
 Maintainer: Debian Games Team <pkg-games-devel@lists.alioth.debian.org>
 Uploaders:
  Markus Koschany <apo@debian.org>
@@ -21,7 +20,7 @@ Build-Depends:
  libxt-dev (>= 6.8.2),
  libxxf86vm-dev (>= 6.8.2),
  zlib1g-dev (>= 1.2.1.1)
-Standards-Version: 4.5.1
+Standards-Version: 4.7.4
 Vcs-Git: https://salsa.debian.org/games-team/torcs.git
 Vcs-Browser: https://salsa.debian.org/games-team/torcs
 Homepage: http://torcs.org
