@@ -1,7 +1,7 @@
 Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: TORCS
 Upstream-Contact: Bernhard Wymann <berniew@bluechin.ch>
-Source: http://torcs.sourceforge.net
+Source: https://torcs.sourceforge.net
 
 Files: *
 Copyright: 2000, Eric Espié <eric.espie@free.fr>
