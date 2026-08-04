@@ -13,11 +13,12 @@ override_dh_auto_configure:
 		--bindir=\$${prefix}/games \
 		--x-libraries=/usr/lib/
 
-override_dh_install:
+execute_before_dh_install:
 	$(RM) debian/tmp/usr/share/games/torcs/telemetry/telemetry.sh
 	$(RM) debian/tmp/usr/share/games/torcs/tracks/road/ole-road-1/generate.sh
 	$(RM) debian/tmp/usr/share/games/torcs/COPYING
-	dh_install
+
+execute_after_dh_install:
 	find debian/ -type f -name Makefile -delete
 	find debian/ -type d -empty -delete
 
