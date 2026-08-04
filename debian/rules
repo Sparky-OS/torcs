@@ -1,7 +1,4 @@
 #!/usr/bin/make -f
-PKD   = $(abspath $(dir $(MAKEFILE_LIST)))
-PKG   = $(word 2,$(shell dpkg-parsechangelog -l$(PKD)/changelog | grep ^Source))
-VER   = $(shell dpkg-parsechangelog -l$(PKD)/changelog -SVersion | cut -d- -f1)
 export DEB_LDFLAGS_MAINT_APPEND = -Wl,--as-needed
 export DEB_BUILD_MAINT_OPTIONS = hardening=+all
 
@@ -26,6 +23,6 @@ override_dh_auto_install:
 	dh_auto_install -- install DESTDIR=$(CURDIR)/debian/tmp
 	dh_auto_install -- datainstall DESTDIR=$(CURDIR)/debian/tmp
 
-override_dh_installchangelogs:
+execute_before_dh_installdocs:
 	# The Changes paragraph inside the README is basically the changelog.
-	dh_installchangelogs README
+	cat `find doc/changelogs -type f | sort -V -r` > $(CURDIR)/NEWS
