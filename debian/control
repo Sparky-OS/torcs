@@ -7,7 +7,7 @@ Build-Depends:
  debhelper-compat (= 13),
  freeglut3-dev (>= 2.2.0),
  libalut-dev (>= 1.0.0),
- libgl1-mesa-dev,
+ libgl-dev,
  libopenal-dev,
  libplib-dev,
  libpng-dev,
