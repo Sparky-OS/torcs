@@ -1,0 +1,17 @@
+
+<table class="embedded" cellspacing="0">
+	<tr>
+		<td class="border contentbordercolor">
+
+			<table class="embedded3 text14" cellspacing="0">
+				<tr class="tight">
+					<td>
+						<h3>{PC_EVENT_NAME} Rules</h3>
+						{PC_RULES}
+					</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+</table>
+

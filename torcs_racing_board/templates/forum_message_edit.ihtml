@@ -1,0 +1,51 @@
+
+<table class="embedded" cellspacing="0">
+	<tr>
+		<td class="border contentbordercolor">
+
+			<form method="post" action="{PC_FORUM_EDIT}" class="embedded">
+				<input type="hidden" name="id_message" value="{PC_ID_MESSAGE}">
+				<input type="hidden" name="id_thread" value="{PC_ID_THREAD}">
+
+				<table class="text14" cellspacing="0">
+					<!-- BEGIN message_poll -->
+					<tr>
+						<td class="filledlist" align="left" valign="top">
+							Poll:<br>
+							<select name="message_pollid" size="1" class="admincol0">
+								<option value="0">No Poll</option>
+							<!-- BEGIN message_poll_options -->
+								<option {PC_POLL_SELECTED} value="{PC_POLL_ID}">{PC_POLL_QUESTION}</option>
+							<!-- END message_poll_options -->
+							</select>
+						</td>
+					</tr>
+					<!-- END message_poll -->
+
+					<tr>
+						<td class="filledlist" align="left" valign="top">
+							Subject:<br>
+							<input type="text" name="subject" class="admincol0" value="{PC_SUBJECT}"/>
+						</td>
+					</tr>
+
+					<tr>
+						<td class="filledlist" align="left" valign="top">
+							Text:<br>
+							<textarea name="text" rows="10" class="admincol0">{PC_MESSAGE}</textarea>
+						</td>
+					</tr>
+
+				</table>
+
+				<table class="text14" cellspacing="0">
+					<tr>
+						<td class="filledlist">
+							<input type="submit" name="submit_forum_edit" value="Submit Message"/>
+						</td>
+					</tr>
+				</table>
+			</form>
+		</td>
+	</tr>
+</table>

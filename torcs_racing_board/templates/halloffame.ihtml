@@ -1,0 +1,39 @@
+
+<table class="embedded" cellspacing="0">
+	<tr>
+		<td class="border contentbordercolor">
+			<h3>Hall of Fame</h3>
+			<p>
+				The champions. Get your team and drivers here.
+			</p>
+		</td>
+	</tr>
+</table>
+<table class="embeddedts" cellspacing="0">
+	<tr>
+		<td class="border contentbordercolor">
+			<h3>TRB Team Champions</h3>
+			<p>
+			<!-- BEGIN teamrow -->
+				<a href="{ROOTPATH}events/event_view.php?vieweventid={PC_EVENTID}">{PC_EVENTNAME}</a> won by
+				<a href="{ROOTPATH}teams/team_view.php?viewteamid={PC_TEAMID}">{PC_TEAMNAME}</a>
+				({PC_POINTS} points)<br/>
+			<!-- END teamrow -->
+			<p>
+		</td>
+	</tr>
+</table>
+<table class="embeddedts" cellspacing="0">
+	<tr>
+		<td class="border contentbordercolor">
+			<h3>TRB Driver Champions</h3>
+			<p>
+			<!-- BEGIN driverrow -->
+				<a href="{ROOTPATH}events/event_view.php?vieweventid={PC_EVENTID}">{PC_EVENTNAME}</a> won by
+				<a href="{ROOTPATH}teams/team_view.php?viewteamid={PC_TEAMID}">{PC_DRIVERNAME}</a>
+				({PC_POINTS} points)<br/>
+			<!-- END driverrow -->
+			<p>
+		</td>
+	</tr>
+</table>

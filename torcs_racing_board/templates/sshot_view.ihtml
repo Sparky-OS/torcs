@@ -1,0 +1,25 @@
+
+<table class="embedded border contentbordercolor" cellspacing="0">
+	<tr>
+		<td>
+			<img src="{PC_SSHOT_IMG_SRC}" alt="screenshot" border="0" style="display:block;margin-bottom:7px; margin-top:7px; margin-left:auto; margin-right:auto;"/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<p style="text-align:center;">
+				{PC_SSHOT_DESC} {PC_SSHOT_TIMESTAMP}
+			</p>
+		</td>
+	</tr>
+</table>
+<table class="embedded noborder navmargin text14" cellspacing="0">
+	<tr>
+		<td class="filledlist" style="text-align:left;">
+			<a href="{PC_LIST_PREV_LINK}">{PC_LIST_PREV}</a>
+		</td>
+		<td class="filledlist" style="text-align:right;">
+			<a href="{PC_LIST_NEXT_LINK}">{PC_LIST_NEXT}</a>
+		</td>
+	</tr>
+</table>

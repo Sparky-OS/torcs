@@ -1,0 +1,11 @@
+<table class="embedded" cellspacing="0">
+	<tr>
+		<td class="border contentbordercolor">
+
+			<h3 class="warncolor">Object Not Found</h3>
+			<p>
+				The requested operation could not be performed.
+			</p>
+		</td>
+	</tr>
+</table>
