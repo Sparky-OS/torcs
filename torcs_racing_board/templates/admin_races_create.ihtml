@@ -1,0 +1,76 @@
+<table class="embedded" cellspacing="0">
+	<tr>
+		<td class="border contentbordercolor">
+
+			<h3>Create a set of new races</h3>
+			<p>
+				Here you can create a set of new races based on your desired schedule. You can edit the track per race in the race edit page.
+			</p>
+
+			<form method="post" action="{PC_CREATERACESPAGE}" class="embedded">
+				<input type="hidden" name="event_id" value="{PC_EVENT_ID}">
+				<table class="text14" cellspacing="0">
+					<tr>
+						<td class="admincol11 filledlist">
+							Races:
+						</td>
+						<td class="filledlist">
+							<select name="event_races" size="1">
+							<!-- BEGIN maxtrow -->
+								<option {PC_EVENT_RACES_SEL} value="{PC_EVENT_RACES_NB}">{PC_EVENT_RACES_NB}</option>
+							<!-- END maxtrow -->
+							</select>
+						</td>
+					</tr>
+
+					<tr>
+						<td class="admincol11 filledlist">
+							Start date:
+						</td>
+						<td class="admincol21 filledlist">
+							<input type="text" name="base_races_start" size="20" maxlength="19" value="{PC_BASE_RACES_START}"/>
+						</td>
+					</tr>
+
+					<tr>
+						<td class="filledlist">
+							Submission duration:
+						</td>
+						<td class="admincol21 filledlist">
+							<input type="text" name="race_submission_duration" size="3" maxlength="2" value="{PC_RACE_SUBMISSION_DURATION}"/>
+							Days
+						</td>
+					</tr>
+
+					<tr>
+						<td class="filledlist">
+							Racing duration:
+						</td>
+						<td class="admincol21 filledlist">
+							<input type="text" name="race_racing_duration" size="3" maxlength="2" value="{PC_RACE_RACING_DURATION}"/>
+							Days
+						</td>
+					</tr>
+
+					<tr>
+						<td class="filledlist">
+							Pause duration:
+						</td>
+						<td class="admincol21 filledlist">
+							<input type="text" name="race_maintenance_duration" size="3" maxlength="2" value="{PC_RACE_MAINTENANCE_DURATION}"/>
+							Days
+						</td>
+					</tr>
+				</table>
+
+				<table class="text14" cellspacing="0">
+					<tr>
+						<td class="filledlist">
+							<input type="submit" name="races_submit" value="Create Races">
+						</td>
+					</tr>
+				</table>
+			</form>
+		</td>
+	</tr>
+</table>

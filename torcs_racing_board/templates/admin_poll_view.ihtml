@@ -1,0 +1,88 @@
+
+<table class="embedded" cellspacing="0">
+	<tr>
+		<td class="border contentbordercolor">
+			<h3>View Poll</h3>
+
+			<table class="innertable text14" cellspacing="0">
+				<tr class="table1color">
+					<td class="admincol1 filledlist">
+						Id:
+					</td>
+					<td class="filledlist">
+						{PC_POLL_ID}
+					</td>
+				</tr>
+
+				<tr class="table2color">
+					<td class="filledlist">
+						Owner:
+					</td>
+					<td class="filledlist">
+						{PC_POLL_OWNER}
+					</td>
+				</tr>
+
+				<tr class="table1color">
+					<td class="filledlist" align="left" valign="top">
+						Question:
+					</td>
+					<td class="filledlist" style="text-align:justify;">
+						{PC_POLL_QUESTION}
+					</td>
+				</tr>
+
+				<tr class="table2color">
+					<td class="filledlist">
+						Start date:
+					</td>
+					<td class="filledlist">
+						{PC_POLL_STARTDATE}
+					</td>
+				</tr>
+
+				<tr class="table1color">
+					<td class="filledlist">
+						End date:
+					</td>
+					<td class="filledlist">
+						{PC_POLL_ENDDATE}
+					</td>
+				</tr>
+
+				<tr class="table2color">
+					<td class="filledlist">
+						Groups:
+					</td>
+					<td class="filledlist">
+						{PC_POLL_GROUPS}
+					</td>
+				</tr>
+			</table>
+
+			<table class="innertable smallmargintop smallmarginbottom text14" cellspacing="0">
+				<tr class="submitbuttoncolor">
+					<th class="filledlist" align="left">Id</th>
+					<th class="filledlist" align="left">Answer</th>
+					<th class="filledlist" align="left">#Votes</th>
+				</tr>
+
+				<!-- BEGIN answer_row -->
+				<tr bgcolor="{PC_COLOR_ANSWER}">
+					<td class="filledlist" align="left" valign="top">
+						{PC_POLL_ANSWER_ID}
+					</td>
+					<td class="filledlist" align="left" valign="top">
+						{PC_POLL_ANSWER}
+					</td>
+					<td class="filledlist" align="left" valign="top">
+						{PC_POLL_ANSWER_VOTES}
+					</td>
+				</tr>
+				<!-- END answer_row -->
+
+			</table>
+
+		</td>
+	</tr>
+</table>

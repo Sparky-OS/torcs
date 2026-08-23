@@ -1,0 +1,13 @@
+
+<table class="embedded" cellspacing="0">
+	<tr>
+		<td class="border contentbordercolor">
+			<h3>Account Activation Failed</h3>
+			<p>
+				Sorry, the activation of the requested account failed.
+				Probably your activation time has expired or the account has been activated
+				already.
+			</p>
+		</td>
+	</tr>
+</table>

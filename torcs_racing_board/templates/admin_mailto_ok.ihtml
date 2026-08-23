@@ -1,0 +1,11 @@
+<table class="embedded" cellspacing="0">
+	<tr>
+		<td class="border contentbordercolor">
+
+			<h3>Mails Sent</h3>
+			<p>
+				Sending of {PC_FAILED_MAILS} mails failed.
+			</p>
+		</td>
+	</tr>
+</table>

@@ -1,0 +1,27 @@
+<Project>
+	<PropertyGroup>
+		<DepsRoot>$(SolutionDir)src\windows</DepsRoot>
+	</PropertyGroup>
+	
+	<!-- Custom global properties for all projects in this solution -->
+	<PropertyGroup Condition="'$(Configuration)'=='Debug'">
+		<TorcsRuntimeDir>$(SolutionDir)runtimed\</TorcsRuntimeDir>
+		<TorcsExportLibDir>$(SolutionDir)export\libd\</TorcsExportLibDir>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)'=='Release'">
+		<TorcsRuntimeDir>$(SolutionDir)runtime\</TorcsRuntimeDir>
+		<TorcsExportLibDir>$(SolutionDir)export\lib\</TorcsExportLibDir>
+	</PropertyGroup>
+
+	<!-- Platform-specific library and DLL folders -->
+	<PropertyGroup Condition="'$(Platform)'=='Win32'">
+		<TorcsLibDir>$(DepsRoot)\lib</TorcsLibDir>
+		<TorcsDllDir>$(DepsRoot)\dll</TorcsDllDir>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Platform)'=='x64'">
+		<TorcsLibDir>$(DepsRoot)\lib64</TorcsLibDir>
+		<TorcsDllDir>$(DepsRoot)\dll64</TorcsDllDir>
+	</PropertyGroup>
+</Project>

@@ -1,0 +1,75 @@
+\page changelog_1_3_8 Changelog TORCS 1.3.8
+
+## Changes since 1.3.8-test1
+
+- Adopted car1-stock1 for tire wear (Bernhard).
+- Adopted car1-stock2 for tire wear (Bernhard).
+- Adopted car1-ow1 for tire wear (Bernhard).
+- Fixed a bug regarding TRB result submission (Wolf-Dieter, Bernhard).
+- Cleanup of endrace.ixml template (Wolf-Dieter, Bernhard).
+- Fixed broken png's caused by CVS to git migration (Bernhard).
+- Adjusted tire parameters for new TRB season (Bernhard).
+- Fixed trb query for best track laptimes regarding MySQL ONLY_FULL_GROUP_BY (Bernhard).
+- Fixed trb default timestamps for MySQL strict mode (Bernhard).
+- Brake balance adjustable during ride (Bernhard).
+- Added surface property blending for tires transitioning over two different surfaces
+  laterally. The idea is to have less abrupt grip changes when driving extremly close
+  to surface boundaries (Bernhard).
+- Added more common screen resolutions for fallback (Bernhard).
+- Made font reading code compatible with glfont2 files. Everything with a resolution of 256 or
+  smaller is interpreted as glfont 1 file, everything else as glfont 2 (Bernhard).
+- Updated the fonts b5 and b7 with higher resolution (Bernhard).
+- Downscaling the fonts fizzled them out on rendering, added mipmap generation and filtering
+  for better results (Bernhard).
+- Curb sound, inspired by implementation of speeddreams/beaglejoe, but enhanced with
+  material blending from above (Bernhard, Beaglejoe).
+- Implemented sound blending also for other surface transitions (Bernhard).
+- Fixed a minor coordinate bug in the tire sound code, nobody has ever noticed (Bernhard).
+- Increased the sound engine evaluation limit from 50 to 100 Hz, CPU's got faster (Bernhard).
+- Updated OpenAL dll to openal-soft-1.23.1 to get rid of some audio crackling (Bernhard).
+- Updated controller configuration, such that axis which are also buttons (like L2 and R2 on
+  PS4 gamepad) can be selected and calibrated with less fuss (Bernhard).
+- Adopted cars for tire temperature model: 2000 GT, 5300 GT, A110, TZ2, AH 3000 Mk II,
+  Cobra 427, Cobra DS, GT Conrero, T-Top, F365 Gtb4 Daytona, AM DB4 GT Zagato,
+  AM DBS, Dino 246 GT, Ghibli and Giulietta Spider (Bernhard).
+- Little refactoring of RtTrackHeightL for readability (Bernhard).
+- Refactoring of RtTrackLocal2Global, TR_TOLEFT was not properly implemented, but this did
+  not matter much, because almost exclusively TR_TORIGHT was used (Bernhard).
+- Refactoring of RtTrackGlobal2Local, unification of similar right/left code. Still more to
+  go (Bernhard).
+- Fixed most compiler warnings in Linux (Bernhard).
+- Updated build system and doxygen configuration, version set to 1.3.8 (Bernhard).
+- Updated Windows installer for 1.3.8 (Bernhard).
+
+## Changes since 1.3.7
+
+- Added isnan check in collision response calculation (type and dimension transformation
+  could potentially lead to a normal with length 0) (Wolf-Dieter, Daniel, Bernhard).
+- Z collisions reworked (car-road) (Bernhard).
+- Improved wheel position calculation (Bernhard).
+- Improved ride height calculation (Bernhard).
+- Fixed tiny graphical position offset when rendering car on strong banking (Bernhard).
+- Adjusted parameters and shadow of car1-ow1 (Wolf-Dieter, Bernhard).
+- Implemented caster, adjustable via setup structure and screen (Bernhard).
+- Suspension slow/fast threshold is now adjustable (Bernhard).
+- Changed 2.5D calculations to 3D (Bernhard).
+- Fixed calculation of the angle of attack for spoilers (Bernhard).
+- Added initial tire temperature/wear model (Bernhard).
+- Made tire temperature/wear model data available for robots (Bernhard).
+- Added tire temperature/wear temperature model data to dashboard (Bernhard).
+- Added tire temperature/wear configuration parameter, "tire factor", see practice.xml as
+  example. If the factor is 0, the temperature/wear model gets disabled (Bernhard).
+- Just enable tire temperature/wear in pro mode (Bernhard).
+- Added new track created by Andrew Sumner, Hidden Valley (Andrew, Bernhard).
+- Added field to tPitCmd struct to control tire change (Bernhard).
+- Updated pit stop screen to change tires or leave it on (Bernhard).
+- Performance adjustment for car6-trb1, should now be more competitive (Wolf-Dieter,
+  Bernhard).
+- Tire change time can now be configured as parameter "all tires change time", the default
+  is 16 seconds (Bernhard).
+- Added track internal name field to TRB for XML generation (Bernhard).
+- TRB adoptions, selecting driver optionally by name (previously only by index), added
+  configuration option for "skill level default" in the "Drivers" section (Bernhard).
+- Added race configuration generator for TRB (Bernhard).
+- Integrated race configuration generator into TRB race submission page (Bernhard).
+- Updated Windows installer for 1.3.8-test1 (Bernhard).

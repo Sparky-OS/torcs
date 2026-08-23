@@ -1,0 +1,63 @@
+
+<table class="embedded" cellspacing="0">
+	<tr>
+		<td class="border contentbordercolor">
+
+			<!-- BEGIN sendnew -->
+			<h3>Sending E-Mail to Groups</h3>
+			<p>
+				The message is sent to the selected user groups by e-mail.
+			</p>
+			<!-- END sendnew -->
+
+			<!-- BEGIN sendnewfailed -->
+			<h3 class="warncolor">Sending E-Mail to Groups Failed</h3>
+			<p>
+				The message has not been sent, make sure that all fields are set and receivers
+				are selected.
+			</p>
+			<!-- END sendnewfailed -->
+
+			<form method="post" action="{PC_MAIL_SEND}" class="embedded">
+
+				<table class="text14" cellspacing="0">
+
+					<tr>
+						<td class="filledlist" align="left" valign="top">
+							Groups:<br>
+						<!--/td>
+						<td class="filledlist"-->
+							<select name="mail_groups[]" size="3" multiple="multiple">
+								<option>spectator</option>
+								<option>racer</option>
+								<option>admin</option>
+							</select>
+						</td>
+					</tr>				
+
+					<tr>
+						<td class="filledlist" align="left" valign="top">
+							Subject:<br>
+							<input type="text" name="subject" value="[TRB] " class="admincol0"><br>
+						</td>
+					</tr>
+
+					<tr>
+						<td class="filledlist" align="left" valign="top">
+							Text:<br>
+							<textarea name="text" rows="12" class="admincol0"></textarea><br>
+						</td>
+					</tr>
+				</table>
+
+				<table class="text14" cellspacing="0">
+					<tr>
+						<td class="filledlist">
+							<input type="submit" name="send_mail" value="Send Mail to Groups">
+						</td>
+					</tr>
+				</table>
+			</form>
+		</td>
+	</tr>
+</table>

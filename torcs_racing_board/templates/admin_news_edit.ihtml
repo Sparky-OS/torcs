@@ -1,0 +1,36 @@
+<table class="embedded" cellspacing="0">
+	<tr>
+		<td class="border contentbordercolor">
+
+			<h3>Edit News</h3>
+
+			<form method="post" action="{PC_CREATENEWSPAGE}" class="embedded">
+				<input type="hidden" name="news_id" value="{PC_NEWS_ID}"/>
+				<table class="text14" cellspacing="0">
+
+					<tr>
+						<td class="filledlist" align="left" valign="top">
+							Title:<br>
+							<input type="text" name="news_title" maxlength="100" value="{PC_NEWS_TITLE}" class="admincol0"><br>
+						</td>
+					</tr>
+
+					<tr>
+						<td class="filledlist" align="left" valign="top">
+							Text:<br>
+							<textarea name="news_text" rows="12" class="admincol0">{PC_NEWS_TEXT}</textarea><br>
+						</td>
+					</tr>
+				</table>
+
+				<table class="text14" cellspacing="0">
+					<tr>
+						<td class="filledlist">
+							<input type="submit" name="news_submit" value="Update News">
+						</td>
+					</tr>
+				</table>
+			</form>
+		</td>
+	</tr>
+</table>

@@ -1,0 +1,87 @@
+<table class="embedded" cellspacing="0">
+	<tr>
+		<td class="border contentbordercolor">
+
+			<h3>Create a New Race</h3>
+			<p>
+				Here you can create a new race.
+			</p>
+
+			<form method="post" action="{PC_CREATERACEPAGE}" class="embedded">
+				<input type="hidden" name="event_id" value="{PC_EVENT_ID}">
+				<table class="text14" cellspacing="0">
+
+					<tr>
+						<td class="admincol11 filledlist">
+							Robot submission start:
+						</td>
+						<td class="admincol21 filledlist">
+							<input type="text" name="race_robot_sub_start" size="20" maxlength="19" value="{PC_RACE_ROBOT_SUBMIT_START}"/>
+						</td>
+					</tr>
+
+					<tr>
+						<td class="filledlist">
+							Robot submission end:
+						</td>
+						<td class="admincol21 filledlist">
+							<input type="text" name="race_robot_sub_end" size="20" maxlength="19" value="{PC_RACE_ROBOT_SUBMIT_END}"/>
+						</td>
+					</tr>
+
+					<tr>
+						<td class="filledlist">
+							Result submission start:
+						</td>
+						<td class="admincol21 filledlist">
+							<input type="text" name="race_result_sub_start" size="20" maxlength="19" value="{PC_RACE_RESULT_SUBMIT_START}"/>
+						</td>
+					</tr>
+
+					<tr>
+						<td class="filledlist">
+							Result submission end:
+						</td>
+						<td class="admincol21 filledlist">
+							<input type="text" name="race_result_sub_end" size="20" maxlength="19" value="{PC_RACE_RESULT_SUBMIT_END}"/>
+						</td>
+					</tr>
+
+					<tr>
+						<td class="filledlist" align="left" valign="top">
+							Track:
+						</td>
+						<td class="filledlist">
+							<select name="race_track" size="1">
+							<!-- BEGIN row -->
+								<option {PC_RACE_TRACK_SEL} value="{PC_RACE_TRACK_ID}">{PC_RACE_TRACK_NAME}</option>
+							<!-- END row -->
+							</select>
+						</td>
+					</tr>
+
+					<tr>
+						<td class="filledlist" align="left" valign="top">
+							TORCS version:
+						</td>
+						<td class="filledlist">
+							<select name="version" size="1">
+							<!-- BEGIN version -->
+								<option {PC_VERSION_SEL} value="{PC_VERSION_ID}">{PC_VERSION_NAME}</option>
+							<!-- END version -->
+							</select>
+						</td>
+					</tr>
+				</table>
+
+				<table class="text14" cellspacing="0">
+					<tr>
+						<td class="filledlist">
+							<input type="submit" name="race_submit" value="Submit Race">
+						</td>
+					</tr>
+				</table>
+			</form>
+		</td>
+	</tr>
+</table>

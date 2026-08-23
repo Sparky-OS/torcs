@@ -1,0 +1,11 @@
+<table class="embedded" cellspacing="0">
+	<tr>
+		<td class="border contentbordercolor">
+
+			<h3>Race Stored</h3>
+			<p>
+				The race has been stored. You can now <a href="{ROOTPATH}events/event_view.php?vieweventid={PB_EVENT_ID}">add more races to the event</a>.
+			</p>
+		</td>
+	</tr>
+</table>

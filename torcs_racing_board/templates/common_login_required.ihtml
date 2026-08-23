@@ -1,0 +1,11 @@
+<table class="embedded" cellspacing="0">
+	<tr>
+		<td class="border contentbordercolor">
+
+			<h3 class="warncolor">Login required</h3>
+			<p>
+				The requested action requires you to log in.
+			</p>
+		</td>
+	</tr>
+</table>

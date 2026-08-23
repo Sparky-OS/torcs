@@ -1,0 +1,11 @@
+<table class="embedded" cellspacing="0">
+	<tr>
+		<td class="border contentbordercolor">
+
+			<h3>Event Stored</h3>
+			<p>
+				The event has been stored. You can now add races to the event.
+			</p>
+		</td>
+	</tr>
+</table>

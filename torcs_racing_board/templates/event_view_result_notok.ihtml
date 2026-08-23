@@ -1,0 +1,14 @@
+<table class="embedded" cellspacing="0">
+	<tr>
+		<td class="border contentbordercolor">
+
+			<h3 class="warncolor">Not Enough Submissions</h3>
+			<p>
+				More than 50% of the users willing to run the race reported problems or
+				nobody submitted a result, therefore
+				the race must become repeated at the end of the season or canceled. You can
+				<a href="{ROOTPATH}events/event_view_rawresult.php?raceid={PC_RACE_ID}">have a look at the raw results here anyway</a>.
+			</p>
+		</td>
+	</tr>
+</table>

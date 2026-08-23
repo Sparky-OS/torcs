@@ -1,0 +1,17 @@
+<table class="embedded" cellspacing="0">
+	<tr>
+		<td class="border contentbordercolor">
+
+			<h3>Result Submitted Successfully</h3>
+			<p>
+				Your result has been stored with {PC_NB_WARNINGS} {PC_WARNING_STRING}. Please archive a
+				copy of the result file.
+			</p>
+			<ul>
+				<!-- BEGIN warning -->
+				<li>{PC_WARNING}</li>
+				<!-- END warning -->
+			</ul>
+		</td>
+	</tr>
+</table>

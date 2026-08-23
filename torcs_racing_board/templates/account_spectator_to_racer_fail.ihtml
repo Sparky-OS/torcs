@@ -1,0 +1,12 @@
+
+<table class="embedded" cellspacing="0">
+	<tr>
+		<td class="border contentbordercolor">
+			<h3>You Did Not Advance</h3>
+			<p>
+				You did not pass the quizz, therefore you are still a 'spectator'. You can try to become
+				a racer again. Good luck.
+			</p>
+		</td>
+	</tr>
+</table>
