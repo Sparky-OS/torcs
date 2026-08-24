@@ -1,2 +1,6 @@
 include:
   - https://salsa.debian.org/salsa-ci-team/pipeline/raw/master/recipes/debian.yml
+
+variables:
+  # like most graphical games there is no autopkgtests
+  SALSA_CI_DISABLE_AUTOPKGTEST: 1
