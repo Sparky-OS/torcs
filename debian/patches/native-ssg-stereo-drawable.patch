@@ -1,0 +1,20 @@
+Description: Request a stereo drawable for the native plib stereo option
+ Keep the normal GLUT mode unchanged when the option is disabled.
+Forwarded: no
+
+Index: torcs-1.3.7+dfsg/src/libs/tgfclient/screen.cpp
+===================================================================
+--- torcs-1.3.7+dfsg.orig/src/libs/tgfclient/screen.cpp
++++ torcs-1.3.7+dfsg/src/libs/tgfclient/screen.cpp
+@@ -368,6 +368,11 @@ void GfScrInit(int argc, char *argv[])
+ 	}
+ 
+ 
++	const char *stereo = getenv("PLIB_SSG_STEREO");
++	if (stereo && (!strcmp(stereo, "ON") || !strcmp(stereo, "1"))) {
++		glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB | GLUT_DEPTH | GLUT_STEREO);
++	}
++
+ 	if (strcmp(fscr, GFSCR_VAL_YES) == 0) {
+ 		for (i = maxfreq; i > 59; i--) {
+ 			snprintf(buf, BUFSIZE, "%dx%d:%d@%d", winX, winY, depth, i);

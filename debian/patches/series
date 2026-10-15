@@ -4,3 +4,4 @@ format-argument.patch
 manpage-and-spelling.patch
 gcc7.patch
 support-runstatedir.patch
+native-ssg-stereo-drawable.patch
